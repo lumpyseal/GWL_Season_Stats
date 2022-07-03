@@ -1,5 +1,4 @@
 import argparse
-import csv
 from pathlib import Path
 
 import pandas as pd
@@ -196,8 +195,6 @@ def reduce_to_df(season_stats: dict) -> pd.DataFrame:
 
 if __name__ == '__main__':
     ARGS = parse_args().__dict__
-
-    logs_dir = ARGS[Arg.LOGS_DIR]
     log_paths = utils.get_log_paths(ARGS[Arg.LOGS_DIR])
 
     season_stats = get_player_season_stats(log_paths)
