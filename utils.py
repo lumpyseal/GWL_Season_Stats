@@ -52,7 +52,7 @@ def fix_hero_names(df: pd.DataFrame) -> None:
     """
     Fix hero names in-place
     """
-    hero_name_fix = {'LÃºcio': 'Lucio', 'TorbjÃ¶rn': "Torbjorn"}
+    hero_name_fix = {'Lúcio': 'Lucio', 'Torbjörn': 'Torbjorn'}
     df[StatsCol.HERO] = df[StatsCol.HERO].replace(to_replace=hero_name_fix)
 
 
